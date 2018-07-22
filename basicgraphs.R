@@ -5,6 +5,12 @@
 
 #plot
 women
+?women
+
+#women - average heights and weights of american women, inbuilt
+
+?plot
+
 plot(women)
 plot(women, type='p', pch=17)
 plot(women, type='l')
@@ -19,10 +25,14 @@ title(main='Main Title', sub='Sub Title')
 plot(women)
 abline(lm(women$weight ~ women$height), col='red', lty=2, lwd=4)
 
+#abline picks up from regression 
+
 
 #boxplot
 boxplot(women$height)
 abline(h=c(58, 62,65,68,72))
+
+
 
 #draw lines on plot for number summary
 summary(women)
@@ -36,11 +46,13 @@ hist(women$height)
 hist(women$height, breaks=10)
 hist(women$height, breaks=5, col=1:5)
 
+
 #histogram2
 x = rnorm(100,50,100)
 hist(x)
 
 hist(x, freq=F, col=1:5)
+
 lines(density(x))
 
 #density plot : shape of data
